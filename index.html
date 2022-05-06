@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+            crossorigin="anonymous"
+        />
+        <title>Schedule</title>
+    </head>
+    <body>
+        <div class="row">
+            <!-- FORMULARIO BÁSICO -->
+            <div class="col-4">
+                <h1 class="my-2">School Schedule Form</h1>
+                <form id="schoolScheduleForm">
+                    <div class="mb-3">
+                        <label for="inputSubject" class="form-label">
+                            Subject
+                        </label>
+                        <select
+                            class="form-select"
+                            aria-label="Subject selection"
+                            id="inputSubject"
+                        >
+                            <option selected value="Lengua">Lengua</option>
+                            <option value="Mates">Mates</option>
+                            <option value="Religión">Religión</option>
+                            <option value="Inglés">Inglés</option>
+                            <option value="EF">EF</option>
+                            <option value="Informática">Informática</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputTeacher" class="form-label">
+                            Teacher
+                        </label>
+                        <select
+                            class="form-select"
+                            aria-label="Teacher selection"
+                            id="inputTeacher"
+                            required
+                        >
+                            <option selected value="AlexCeo">AlexCeo</option>
+                            <option value="AlexWizard">AlexWizard</option>
+                            <option value="David">David</option>
+                            <option value="Debo">Debo</option>
+                            <option value="Helena">Helena</option>
+                            <option value="Bruno">Bruno</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputWeeklyHours" class="form-label">
+                            Weekly hours
+                        </label>
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="inputWeeklyHours"
+                            aria-describedby="weeklyHoursInput"
+                            min="1"
+                            max="10"
+                            value="1"
+                        />
+                    </div>
+                    <button type="submit" class="btn btn-success" id="btnSubmit"
+                        >Submit</button
+                    >
+                </form>
+            </div>
+            <div class="col-8">
+                <!-- TABLA DE RESULTADOS -->
+                <table class="table table-hover mt-3" id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Teacher</th>
+                            <th>Weekly Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody> </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"
+        ></script>
+        <script src="index.js"></script>
+    </body>
+</html>
