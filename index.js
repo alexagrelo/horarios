@@ -9,6 +9,8 @@ function addNewInput(subject, teacher, weeklyHours) {
     }
     data.push(newInput);
     console.log('data: ', data);
+
+    sessionStorage.setItem('data', JSON.stringify(data));
 }
 
 function paintTable() {
@@ -42,24 +44,6 @@ function saveData(e) {
 function reqListener() {
     console.log(this.responseText);
 }
-
-/* function updateJson() {
-    var req = new XMLHttpRequest();
-    req.open("GET", "horarios.json");
-    req.onreadystatechange = function () {
-        if (req.readyState == 4) {
-            if (req.status == 200) {
-                console.log('status 200 readyState 4');
-                console.log(req.responseText);
-
-            }
-            else {
-                console.log("Error loading file\n");
-            }
-        }
-    }
-    req.send(null);
-} */
 
 document.getElementById("btnSubmit").addEventListener("click", saveData);
 paintTable();
